@@ -8,6 +8,10 @@ on:
     branches: [ "master" ]
   schedule:
     - cron: '0 0 * * 0'  # Weekly cron job
+    
+permissions:
+  contents: read  # Read permission for contents is usually enough, but you can also set to 'write' if needed
+  security-events: write  # Write permission for security events is required for CodeQL analysis
 
 jobs:
   analyze:
